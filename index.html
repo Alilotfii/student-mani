@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مانی | سامانه دانش‌آموزی </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="dashboardView">
+    <header class="topbar">
+      <div class="user-chip">
+        <div class="avatar">
+          <img src="./Screenshot (89).png" alt="">
+        </div>
+        <div class="user-meta"><b>مانی سالاری</b><br>دانش‌آموز · پایه یازدعم</div>
+        <span class="logout">خروج</span>
+      </div>
+
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" placeholder="جست‌وجو کنید…">
+        <span>🎙️</span>
+      </div>
+
+      <div class="brand">
+        <div>
+          <div class="brand-name">مانی</div>
+          <div class="brand-sub">سامانه دانش‌آموزی</div>
+        </div>
+        <div class="brand-mark">م</div>
+      </div>
+    </header>
+
+    <div class="safety-strip">
+      <div class="safety-item">
+        <div class="safety-circle a">🛡️</div>
+        <span>نکات ایمنی</span>
+      </div>
+      <div class="safety-item">
+        <div class="safety-circle b">🧼</div>
+        <span>نکات بهداشتی</span>
+      </div>
+    </div>
+
+    <div class="page">
+
+      <!-- SIDEBAR -->
+      <aside>
+        <div class="side-card points-card">
+          <div class="points-badge">⭐ ۱٬۵۷۰ امتیاز</div>
+          <div class="side-illustration"></div>
+          <div class="lbl">خدمات مشاوره</div>
+        </div>
+
+        <div class="side-card">
+          <div class="side-illustration" style="height:90px;"></div>
+          <div class="lbl" style="text-align:center;">موزه‌های ایران</div>
+        </div>
+
+        <div class="side-card">
+          <div class="side-title">بیشترین بازدید اخیر</div>
+          <ul class="visit-list">
+            <li>نتایج آزمون نهایی<b>۶۲۴۰</b></li>
+            <li>کتب درسی <b>۱۹۳۲۰</b></li>
+            <li>دریافت کارنامه <b>۷۴۱۰</b></li>
+            <li>پرونده سلامت <b>۴۴۰۵</b></li>
+            <li>همیار <b>۳۱۹۰</b></li>
+          </ul>
+        </div>
+
+        <div class="side-card support-card">
+          <div class="support-avatar">🎧</div>
+          <h4>کمک نیاز دارید؟</h4>
+          <p>با همکاران ما تماس بگیرید</p>
+          <div class="support-btn">پشتیبانی پویا</div>
+          <div class="support-phone">۰۲۱ - ۹۱۰۰۰۰۰</div>
+        </div>
+      </aside>
+
+      <!-- MAIN -->
+      <main>
+
+        <div class="quick-services">
+          <div class="qs-card">
+            <div class="qs-icon" style="background:#00695c;">🏅</div>
+            <span>نتایج المپیاد</span>
+          </div>
+          <div class="qs-card" onclick="showReportCard()" style="cursor:pointer;">
+            <div class="qs-icon" style="background:#c2185b;">📄</div>
+            <span>دریافت کارنامه</span>
+          </div>
+
+          <div class="qs-card">
+            <div class="qs-icon" style="background:var(--blue-700);">🏫</div>
+            <span>معرفی مدارس</span>
+          </div>
+          <div class="qs-card">
+            <div class="qs-icon" style="background:var(--amber-500);">📚</div>
+            <span>کتب درسی</span>
+          </div>
+
+          <div class="qs-card" onclick="showReportCard()" style="cursor:pointer;">
+            <span class="qs-badge">جدید</span>
+            <div class="qs-icon" style="background:var(--teal-700);">📊</div>
+            <span>نتایج آزمون نهایی</span>
+          </div>
+        </div>
+
+        <div class="banner">
+          <div class="banner-text">
+            <h3>بهار خلاقیت در پویا</h3>
+            <p>در جشنواره‌های فرهنگی، ورزشی و هنری این فصل شرکت کن و استعدادت را کشف کن.</p>
+            <button class="banner-cta">به جمع پویا بپیوند</button>
+          </div>
+          <div class="banner-tags">
+            <span>🎨 هنر</span><span>📖 قرائت</span><span>🤸 ورزش</span><span>🎭 جشنواره</span>
+          </div>
+        </div>
+        <div class="banner-dots">‹ &nbsp; ● ○ ○ &nbsp; ›</div>
+
+        <!-- خدمات آموزشی -->
+        <div class="service-section">
+          <div class="bar">
+            <span>خدمات آموزشی</span>
+            <div class="bar-icons"><span>🎧</span><span>❔</span><span>ℹ️</span></div>
+          </div>
+          <div class="service-grid">
+            <div class="service-item" onclick="showReportCard()" style="cursor:pointer;">
+              <div class="ic" style="background:var(--teal-700);">📊</div>
+              <div class="txt"><b>نتایج آزمون‌ها</b><small>نمرات و کارنامه</small></div>
+            </div>
+            <div class="service-item">
+              <div class="ic" style="background:var(--blue-700);">🪪</div>
+              <div class="txt"><b>کارت دانش‌آموزی</b><small>مشاهده کارت</small></div>
+            </div>
+            <div class="service-item">
+              <div class="ic" style="background:#00897b;">🏫</div>
+              <div class="txt"><b>معرفی مدارس</b><small>جست‌وجوی مدارس</small></div>
+            </div>
+            <div class="service-item" onclick="showReportCard()" style="cursor:pointer;">
+              <div class="ic" style="background:#5e35b1;">📄</div>
+              <div class="txt"><b>دریافت کارنامه</b><small>کارنامه تحصیلی سنوات</small></div>
+            </div>
+            <div class="service-item">
+              <div class="ic" style="background:#3949ab;">📋</div>
+              <div class="txt"><b>لیست دروس</b><small>انتخاب واحد</small></div>
+            </div>
+            <div class="service-item">
+              <div class="ic" style="background:#00acc1;">🧑‍🏫</div>
+              <div class="txt"><b>نظرسنجی معلمان</b><small>ارزیابی کلاس</small></div>
+            </div>
+            <div class="service-item">
+              <div class="ic" style="background:#6d4c41;">🧾</div>
+              <div class="txt"><b>گواهی اشتغال</b><small>گواهی اشتغال به تحصیل</small></div>
+            </div>
+            <div class="service-item">
+              <div class="ic" style="background:#43a047;">🏅</div>
+              <div class="txt"><b>المپیاد ورزشی</b><small>مسابقات درون مدرسه‌ای</small></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- پرورشی و سلامت -->
+        <div class="service-section blue">
+          <div class="bar">
+            <span>پرورشی و سلامت</span>
+            <div class="bar-icons"><span>🎧</span><span>❔</span><span>ℹ️</span></div>
+          </div>
+          <div class="service-grid">
+            <div class="service-item">
+              <div class="ic" style="background:#039be5;">🌱</div>
+              <div class="txt"><b>نشاط مهارت‌آموزی</b><small>فعالیت‌های نشاط‌بخش</small></div>
+            </div>
+            <div class="service-item">
+              <div class="ic" style="background:#7cb342;">👨‍👩‍👧</div>
+              <div class="txt"><b>انجمن اولیا و مربیان</b><small>خدمات انجمن</small></div>
+            </div>
+            <div class="service-item">
+              <div class="ic" style="background:#26a69a;">👁️</div>
+              <div class="txt"><b>سلامت بینایی</b><small>پایش سلامت چشم</small></div>
+            </div>
+            <div class="service-item">
+              <div class="ic" style="background:#8d6e63;">🕊️</div>
+              <div class="txt"><b>یادبود</b><small>سامانه یادبود</small></div>
+            </div>
+            <div class="service-item">
+              <div class="ic" style="background:#5c6bc0;">🌟</div>
+              <div class="txt"><b>بهار خلاقیت</b><small>رویدادهای فصلی</small></div>
+            </div>
+            <div class="service-item">
+              <div class="ic" style="background:#7e57c2;">📈</div>
+              <div class="txt"><b>نمای رشد تربیتی</b><small>گزارش رشد فردی</small></div>
+            </div>
+            <div class="service-item">
+              <div class="ic" style="background:#29b6f6;">📁</div>
+              <div class="txt"><b>پرونده سلامت</b><small>ثبت پرونده</small></div>
+            </div>
+            <div class="service-item">
+              <div class="ic" style="background:#ef5350;">🩺</div>
+              <div class="txt"><b>آگاهی از سلامت</b><small>اطلاعات و پیگیری</small></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- خدمات اداری -->
+        <div class="service-section slate">
+          <div class="bar">
+            <span>خدمات اداری</span>
+            <div class="bar-icons"><span>🎧</span><span>❔</span><span>ℹ️</span></div>
+          </div>
+          <div class="service-grid">
+            <div class="service-item">
+              <div class="ic" style="background:#546e7a;">⚖️</div>
+              <div class="txt"><b>پاسخگویی به شکایات</b><small>ثبت شکایت</small></div>
+            </div>
+            <div class="service-item">
+              <div class="ic" style="background:#78909c;">🚩</div>
+              <div class="txt"><b>رسیدگی به تخلفات</b><small>اعلام تخلف</small></div>
+            </div>
+            <div class="service-item">
+              <div class="ic" style="background:#455a64;">📢</div>
+              <div class="txt"><b>اطلاعیه‌ها</b><small>اخبار و بخشنامه‌ها</small></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- خدمات ویژه -->
+        <div class="service-section amber">
+          <div class="bar">
+            <span>خدمات ویژه</span>
+            <div class="bar-icons"><span>🎧</span><span>❔</span><span>ℹ️</span></div>
+          </div>
+          <div class="service-grid">
+            <div class="service-item">
+              <div class="ic" style="background:#f4511e;">🎧</div>
+              <div class="txt"><b>همیار</b><small>انتقادات و پیشنهادها</small></div>
+            </div>
+            <div class="service-item">
+              <div class="ic" style="background:#fb8c00;">📝</div>
+              <div class="txt"><b>نظرسنجی</b><small>نظرسنجی عمومی</small></div>
+            </div>
+            <div class="service-item">
+              <div class="ic" style="background:#ffa726;">🎮</div>
+              <div class="txt"><b>بازی</b><small>سرگرمی آموزشی</small></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCHOOL PATH -->
+        <div class="school-path">
+          <div class="path-row">
+            <div class="path-node">
+              <div class="bldg" style="background:#e57373;">🏢</div>
+              <span>متوسطه دوم</span>
+            </div>
+            <div class="path-node">
+              <div class="bldg" style="background:#64b5f6;">🏛️</div>
+              <span>متوسطه اول</span>
+            </div>
+            <div class="path-node">
+              <div class="bldg" style="background:#a1887f;">🏠</div>
+              <span>ابتدایی</span>
+            </div>
+          </div>
+          <div class="path-row2">
+            <div class="path-node2">
+              <div class="bk" style="background:#455a64;">📕</div>
+              <span>دوازدهم</span>
+            </div>
+            <div class="path-node2">
+              <div class="bk" style="background:#00897b;">📗</div>
+              <span>یازدهم</span>
+            </div>
+            <div class="path-node2">
+              <div class="bk" style="background:#fbc02d;">📘</div>
+              <span>دهم</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- INFO CARD -->
+        <div class="info-card">
+          <div class="info-cell"><b>۱۴۰۵</b><small>سال تحصیلی</small></div>
+          <div class="info-cell"><b>تهران</b><small>استان</small></div>
+          <div class="info-cell"><b>منطقه ۴</b><small>منطقه</small></div>
+          <div class="info-cell"><b>متوسطه دوم - نظری</b><small>مقطع تحصیلی</small></div>
+          <div class="info-cell"><b>دبیرستان دانش</b><small>مدرسه</small></div>
+          <div class="info-cell"><b>۰۲۵۱۰۲۵۳۴۹</b><small>کد دانش‌آموزی </small></div>
+          <div class="info-cell"><b> تجربی</b><small>رشته</small></div>
+          <div class="info-cell"><b>پایه یازدهم</b><small>پایه تحصیلی</small></div>
+          <div class="info-cell"><b>یازدهم تجربی </b><small>کلاس</small></div>
+        </div>
+
+        <div class="link-bar">
+          <div class="arrow">←</div> نمایش معلمان و دروس من
+        </div>
+        <div class="link-bar">
+          <div class="arrow">←</div> نمایش هم‌کلاسی‌های من
+        </div>
+
+      </main>
+    </div>
+
+    <footer>
+      مالکیت مادی و معنوی این سایت متعلق به وزارت آموزش و پرورش می باشد.
+      طــراحی، تولیـد و توسعه توسط ایــزایران<br>
+
+    </footer>
+  </div><!-- /dashboardView -->
+
+  <!-- ===================== REPORT CARD VIEW ===================== -->
+  <div id="reportView">
+    <header class="topbar">
+      <div class="user-chip">
+        <div class="avatar">
+          <img src="./Screenshot (89).png" alt="">
+        </div>
+        <div class="user-meta"><b>مانی سالاری</b><br>دانش‌آموز · پایه یازدهم </div>
+        <span class="logout">خروج</span>
+      </div>
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" placeholder="جست‌وجو کنید…">
+        <span>🎙️</span>
+      </div>
+      <div class="brand">
+        <div>
+          <div class="brand-name">مانی</div>
+          <div class="brand-sub">سامانه کارنامه دانش‌آموز</div>
+        </div>
+        <div class="brand-mark">م</div>
+      </div>
+    </header>
+
+    <div class="rc-shell">
+      <!-- MAIN -->
+      <main>
+        <button class="rc-back" onclick="showDashboard()">→ بازگشت به داشبورد</button>
+
+        <div class="rc-header">
+          <div>
+            <h2>مشاهده کارنامه و ثبت درخواست بررسی مجدد </h2>
+            <p>این صفحه یک نمونه‌ی آموزشی است و نمرات واقعی هیچ دانش‌آموزی را نشان نمی‌دهد.</p>
+          </div>
+          <div class="rc-header-icon">📋</div>
+        </div>
+
+        <div class="rc-steps">
+          <div class="rc-steps-top">
+            <b>کارنامه خرداد ۱۴۰۵-۱۴۰۴ </b>
+            <b>مشاهده کارنامه</b>
+          </div>
+          <div class="step-track">
+            <div class="step done">
+              <div class="dot">۴</div>ارسال به فارغ‌التحصیلی
+            </div>
+            <div class="step done">
+              <div class="dot">۳</div>اعتراض یا ارسال
+            </div>
+            <div class="step current">
+              <div class="dot">۲</div>مشاهده کارنامه
+            </div>
+            <div class="step done">
+              <div class="dot">✓</div>تأیید مقررات
+            </div>
+          </div>
+        </div>
+
+        <div class="rc-note">ℹ️نمرات را با دقت بررسی کنید. ثبت اعتراض فقط در بازهٔ ۱۴۰۵/۰۶/۰۷، ۱۷:۰۰ تا ۱۴۰۵/۰۶/۱۰،
+          ۱۷:۰۰ ممکن است. </div>
+
+        <div class="rc-warning">
+          <b class="title">⚠️ نکات کلی پیش از ثبت درخواست بررسی مجدد </b>
+          <ol>
+            <li>درخواست بررسی مجدد برای هر درس فقط یک‌بار قابل ثبت است.</li>
+            <li>نتیجه‌ی بررسی می‌تواند نمره را افزایش، کاهش یا بدون تغییر باقی بگذارد.</li>
+            <li>ثبت درخواست باید در بازه‌ی زمانی تعیین‌شده انجام شود.</li>
+            <li>پس از ثبت نهایی نمرات، امکان ویرایش یا لغو درخواست وجود ندارد.</li>
+            <li>در صورت عدم ثبت اعتراض تا پایان مهلت، نمرات به‌صورت خودکار نهایی می‌شوند.</li>
+          </ol>
+        </div>
+
+        <div class="rc-title-row">
+          <button class="rc-print-btn" onclick="printReportCard()">🖨️ پرینت کارنامه</button>
+          <span class="rc-serial">شماره پیگیری: NMN-0000-DEMO</span>
+        </div>
+
+        <div class="rc-cert-title">
+          <h1>آزمون نهایی ۱۴۰۵-۱۴۰۴</h1>
+          <p>کارنامه اولیه — نتیجه نهایی پس از رسیدگی به اعتراض‌ها منتشر می‌شود.</p>
+        </div>
+
+        <div class="rc-idcard">
+          <div class="field"><b>۲۵۱۰۲۵۳۴۹</b><small>شماره دانش‌آموزی </small></div>
+          <div class="field"><b>منطقه ۴ آموزش و پرورش</b><small>منطقه</small></div>
+          <div class="field"><b>۰۲۵۱۰۲۵۳۴۹</b><small>کد ملی </small></div>
+          <div class="field"><b>استان تهران</b><small>استان</small></div>
+          <div class="field"><b>خرداد</b><small>دوره</small></div>
+          <div class="rc-photo-col">
+            <div class="rc-photo">
+              <img src="./Screenshot (89).png" alt="">
+            </div>
+            <div>
+              <div class="field"><b>مانی سالاری</b><small>نام و نام‌خانوادگی</small></div>
+              <div class="field"><b>یازدهم</b><small>پایه</small></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rc-table-wrap">
+          <table class="rc-table">
+            <thead>
+              <tr>
+                <th>نام درس</th>
+                <th>کد درس</th>
+                <th>تعداد پاسخبرگ</th>
+                <th>مستمر اول</th>
+                <th>پایانی اول</th>
+                <th>مستمر دوم</th>
+                <th>نمره نهایی</th>
+                <th>نمره سال</th>
+                <th>وضعیت</th>
+                <th>درخواست بررسی مجدد</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ﺗﻌﻠﻴﻤﺎت دﻳﻨﻲ</td>
+                <td>۱۱۰۱۱</td>
+                <td>۳</td>
+                <td>۲۰</td>
+                <td>۲۰</td>
+                <td>۲۰</td>
+                <td class="rc-final">۱۷<span class="rc-code">A2F1</span></td>
+                <td>۱۸.۵</td>
+                <td><span class="rc-status">قبول</span></td>
+                <td><a class="rc-req-link" href="#">ثبت درخواست</a></td>
+              </tr>
+              <tr>
+                <td>ﻋﺮبﻲ، زﺑﺎن ﻗﺮآن2</td>
+                <td>۱۱۰۲۱</td>
+                <td>۲</td>
+                <td>۲۰</td>
+                <td>۲۰</td>
+                <td>۲۰</td>
+                <td class="rc-final">۱۷.۷۵<span class="rc-code">B7C3</span></td>
+                <td>۱۹</td>
+                <td><span class="rc-status">قبول</span></td>
+                <td><a class="rc-req-link" href="#">ثبت درخواست</a></td>
+              </tr>
+              <tr>
+                <td>ﻓﺎرﺳﻲ 2</td>
+                <td>۱۱۰۳۱</td>
+                <td>۳</td>
+                <td>۲۰</td>
+                <td>۲۰</td>
+                <td>۲۰</td>
+                <td class="rc-final">۱۷<span class="rc-code">D4E9</span></td>
+                <td>۱۸.۵</td>
+                <td><span class="rc-status">قبول</span></td>
+                <td><a class="rc-req-link" href="#">ثبت درخواست</a></td>
+              </tr>
+              <tr>
+                <td>زبان خارجي2</td>
+                <td>۱۱۰۸۱</td>
+                <td>۲</td>
+                <td>۲۰</td>
+                <td>۲۰</td>
+                <td>۲۰</td>
+                <td class="rc-final">۱۸.۵<span class="rc-code">F0B6</span></td>
+                <td>۱۹.۲۵</td>
+                <td><span class="rc-status">قبول</span></td>
+                <td><a class="rc-req-link" href="#">ثبت درخواست</a></td>
+              </tr>
+              <tr>
+                <td>شیمی 2</td>
+                <td>۱۱۱۱۱</td>
+                <td>۶</td>
+                <td>۲۰</td>
+                <td>۲۰</td>
+                <td>۲۰</td>
+                <td class="rc-final">۱۸.۵<span class="rc-code">E1A8</span></td>
+                <td>۱۹.۲۵</td>
+                <td><span class="rc-status">قبول</span></td>
+                <td><a class="rc-req-link" href="#">ثبت درخواست</a></td>
+              </tr>
+              <tr>
+                <td>زﻳﺴﺖ ﺷﻨﺎﺳﻲ 2</td>
+                <td>۱۱۱۷۱</td>
+                <td>۴</td>
+                <td>۲۰</td>
+                <td>۲۰</td>
+                <td>۲۰</td>
+                <td class="rc-final">۱۸<span class="rc-code">C9D2</span></td>
+                <td>۱۹</td>
+                <td><span class="rc-status">قبول</span></td>
+                <td><a class="rc-req-link" href="#">ثبت درخواست</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="rc-footer-row">
+          <button class="rc-send-btn">ارسال نمرات به سامانه مدرسه</button>
+          <div class="rc-dest">مقصد: <b>سامانه مدرسه</b><span class="rc-ready-tag">آماده ارسال</span></div>
+        </div>
+
+        <p class="rc-closing">
+          دانش‌آموز/داوطلب گرامی،
+          در صورتی که نسبت به نمرات مکتسبه خود اعتراضی ندارید، می‌توانید با تأیید نمرات،
+          <br> آن‌ها را برای انجام مراحل بعدی، از جمله صدور کارنامه نهایی و انجام فرایند فارغ‌التحصیلی، به سامانه مدرسه
+          ارسال نمایید.
+        </p>
+      </main>
+
+      <!-- SIDE -->
+      <aside class="rc-side">
+        <div class="rc-brand-card">
+          <div>
+            <b>سامانه کارنامه دانش‌آموز</b>
+            <small>مانی · محیط نمایشی</small>
+          </div>
+          <div class="rc-brand-icon">📋</div>
+        </div>
+
+        <div class="rc-menu-title">منوی اصلی</div>
+        <div class="rc-menu-item" onclick="showDashboard()">داشبورد <span>🔲</span></div>
+        <div class="rc-menu-item active">مشاهده کارنامه و ثبت درخواست بررسی مجدد <span>📋</span></div>
+
+        <div class="rc-date">۱۴۰۵/۰۶/۰۹ </div>
+
+        <div class="rc-user-card">
+          <div class="avatar">م.س</div>
+          <div><b>مانی سالاری</b><small>دانش‌آموز</small></div>
+        </div>
+
+        <div class="rc-menu-item">دانش‌آموز <span>▾</span></div>
+
+        <div class="rc-logout" onclick="showDashboard()">خروج از حساب ⏏
+
+        </div>
+      </aside>
+    </div>
+  </div><!-- /reportView -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
